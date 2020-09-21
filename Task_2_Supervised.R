@@ -9,7 +9,7 @@ head(studentrecord) #display the first six rows of our dataset
 #visualization of the data set using ggplot
 library(ggplot2)
 ggplot()+
-  geom_point(data=studentscores,aes(x=Hours,y=Scores),col="red")+ 
+  geom_point(data=studentrecord,aes(x=Hours,y=Scores),col="red")+ 
   scale_x_continuous(limits = c(1,10),breaks = seq(1,10,1))+
   scale_y_continuous(limits = c(0,100),breaks = seq(0,100,10))
 
@@ -29,7 +29,7 @@ model
 summary(model)
 
 #Plotting regression line on graph
-ggplot(data = studentscores, aes(x = Hours, y = Scores)) +
+ggplot(data = studentrecord, aes(x = Hours, y = Scores)) +
   scale_x_continuous(limits = c(1,10),breaks = seq(1,10,1))+
   scale_y_continuous(limits = c(0,100),breaks = seq(0,100,10))+
   geom_point(color="red") +
