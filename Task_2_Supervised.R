@@ -48,7 +48,7 @@ Predicted_testScore
 rmse(testData$Scores, Predicted_testScore)
 
 #predicting the value of Scores based on a new data 
-NewData = data.frame(Hours=c(2, 4, 6.75, 9, 3.5))
+NewData = data.frame(Hours=c(2, 4, 6.75, 9.25, 3.5))
 NewData
 Predicted_score = predict (model, NewData)
 Predicted_score
